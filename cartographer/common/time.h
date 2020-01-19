@@ -40,8 +40,8 @@ struct UniversalTimeScaleClock {
 // Represents Universal Time Scale durations and timestamps which are 64-bit
 // integers representing the 100 nanosecond ticks since the Epoch which is
 // January 1, 1 at the start of day in UTC.
-using Duration = UniversalTimeScaleClock::duration;
-using Time = UniversalTimeScaleClock::time_point;
+using Duration = UniversalTimeScaleClock::duration;//100 ns
+using Time = UniversalTimeScaleClock::time_point;//utc 1，1，1
 
 // Convenience functions to create common::Durations.
 Duration FromSeconds(double seconds);
