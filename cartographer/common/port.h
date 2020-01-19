@@ -37,6 +37,7 @@ using uint64 = uint64_t;
 
 namespace common {
 
+  /*四舍五入取整*/
 inline int RoundToInt(const float x) { return std::lround(x); }
 
 inline int RoundToInt(const double x) { return std::lround(x); }
@@ -45,6 +46,7 @@ inline int64 RoundToInt64(const float x) { return std::lround(x); }
 
 inline int64 RoundToInt64(const double x) { return std::lround(x); }
 
+  /*快速压缩字符串*/
 inline void FastGzipString(const std::string& uncompressed,
                            std::string* compressed) {
   boost::iostreams::filtering_ostream out;
@@ -56,6 +58,7 @@ inline void FastGzipString(const std::string& uncompressed,
                           uncompressed.size());
 }
 
+  /*快速解压缩字符串*/
 inline void FastGunzipString(const std::string& compressed,
                              std::string* decompressed) {
   boost::iostreams::filtering_ostream out;
